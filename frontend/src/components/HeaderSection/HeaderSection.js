@@ -5,7 +5,7 @@ const HeaderSection = styled.h2`
     letter-spacing: 3px;
     font-size: 28px;
     font-weight: ${props => props.weight || 600};
-    margin: 20px 0;
+    padding: 60px 0 0 0;
 `;
 
 HeaderSection.propTypes = {
