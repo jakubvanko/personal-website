@@ -11,6 +11,8 @@ import HeaderAdditional from "./HeaderAdditional/HeaderAdditional";
 import Project from "./Project/Project";
 import TextGroup from "./TextGroup/TextGroup";
 import ContactGroup from "./ContactGroup/ContactGroup";
+import FormContact from "./FormContact/FormContact";
+import Footer from "./Footer/Footer";
 
 const Main = () => (
     <>
@@ -69,7 +71,7 @@ const Main = () => (
                 GraphQL
                 endpoint, token login system, form validation and a custom content management system.
             </Project>
-            <Project header={"Minecraft Gender rec."}>
+            <Project header={"Minecraft Gender Rec."}>
                 A full-stack web application for concert venue and ticket ordering. Includes a RESTful web API,
                 GraphQL
                 endpoint, token login system, form validation and a custom content management system.
@@ -80,7 +82,9 @@ const Main = () => (
             <HeaderAdditional>
                 Send me a message
             </HeaderAdditional>
+            <FormContact/>
         </Section>
+        <Footer/>
     </>
 );
 
