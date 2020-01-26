@@ -4,6 +4,7 @@ const NavbarBox = styled.header`
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 10;
     height: 50px;
     width: 100vw;
     background-color: white;
@@ -11,7 +12,6 @@ const NavbarBox = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: gainsboro;
 `;
 
 export default NavbarBox;
