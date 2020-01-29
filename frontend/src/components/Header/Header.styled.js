@@ -16,6 +16,7 @@ export const Container = styled.header`
     justify-content: space-between;
     overflow-y: hidden;
     transition: height 0.3s;
+    text-transform: uppercase;
     
     @media only screen and (min-width: 768px) {
         align-items: center;

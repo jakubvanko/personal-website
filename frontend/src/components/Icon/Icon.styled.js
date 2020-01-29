@@ -6,7 +6,7 @@ export const Container = styled.button`
     padding: 0;
     border: none;
     outline: none;
-    grid-area: ${props => props.$area && props.$area};
+    grid-area: ${props => props.$gridArea && props.$gridArea};
     display: ${props => props.$display && props.$display};
     
     svg {

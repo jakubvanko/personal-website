@@ -19,10 +19,10 @@ const ICON_MAP = {
 };
 
 const Icon = ({name, width, height, ...props}) => {
-    const Component = ICON_MAP[name];
+    const IconComponent = ICON_MAP[name];
     return (
         <Container {...props}>
-            <Component width={width} height={height}/>
+            <IconComponent width={width} height={height}/>
         </Container>
     )
 };
