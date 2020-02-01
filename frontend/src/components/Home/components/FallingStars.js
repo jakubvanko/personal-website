@@ -23,9 +23,9 @@ const Star = styled(animated.div)`
 
 const config = {
     clamp: true,
-    mass: 400,
-    tension: 100,
-    friction: 30
+    mass: 2,
+    tension: 1,
+    friction: 2
 };
 
 const generateStartingAxes = width => ({
@@ -43,7 +43,7 @@ const generateEndingAxes = (width, height, startingAxes) => {
     }
 };
 
-const FallingStar = () => {
+const FallingStar = ({delay}) => {
     const [width, height] = useWindowDimensions();
     const [startingAxes, setStartingAxes] = useState(generateStartingAxes(width));
     const [endingAxes, setEndingAxes] = useState(generateEndingAxes(width, height, startingAxes));
@@ -52,7 +52,7 @@ const FallingStar = () => {
         to: {top: endingAxes.top, left: endingAxes.left},
         reset: true,
         config,
-        delay: Math.random() * 5000,
+        delay: Math.random() * 4000,
         onRest: () => {
             setTimeout(() => {
                 const newStartingAxes = generateStartingAxes(width);
