@@ -7,6 +7,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     
     @media only screen and (min-width: 768px) {
         justify-content: left;
@@ -72,16 +73,15 @@ export const TextContainer = styled.div`
 
 export const PositionedBackground = styled.div`
     position: absolute;
-    right: 0;
     z-index: -1;
     overflow: hidden;
-    width: 787px;
     height: 100vh;
+    width: 100vw;
     
     svg {
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         z-index: -1;
     }
 `;
