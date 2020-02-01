@@ -7,7 +7,8 @@ export const Container = styled.header`
     z-index: 10;
     width: 100vw;
     height: ${props => props.$mobileActive ? "250px" : "50px"};
-    background-color: white;
+    background-color: transparent;
+    // TODO: SET BG COLOR ON SCROLL TO WHITE AND ADD SHADOWS
     padding: 10px 40px;
     display: grid;
     grid-template-areas: "signature desktop hamburger" "mobile mobile mobile";
@@ -36,7 +37,6 @@ export const List = styled.ul`
     
     @media only screen and (min-width: 768px) {
         grid-template-columns: auto auto auto;
-        font-size: 19px;
         grid-area: desktop;
     }
 `;

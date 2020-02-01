@@ -24,17 +24,6 @@ Written in MERN stack and includes a RESTful web API, GraphQL endpoint, custom d
 multiple machine learning algorithms and 3rd party API integration.
 `;
 
-export const HEADER_LINKS = [{
-    text: "About",
-    link: "#about"
-}, {
-    text: "Portfolio",
-    link: "#portfolio"
-}, {
-    text: "Contact",
-    link: "#contact"
-}];
-
 export const TEXT_SECTIONS = {
     about: {
         title: "About me",

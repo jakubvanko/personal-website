@@ -8,6 +8,7 @@ export const Container = styled.button`
     outline: none;
     grid-area: ${props => props.$gridArea && props.$gridArea};
     display: ${props => props.$display && props.$display};
+    align-self: center;
     
     svg {
         display: block;

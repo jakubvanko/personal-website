@@ -3,7 +3,7 @@ import React from "react";
 import "./main.css"
 
 import Header from "./Header/Header";
-import Home from "../scenes/Home";
+import Home from "./Home/Home";
 import About from "../scenes/About";
 import Portfolio from "../scenes/Portfolio";
 import Contact from "../scenes/Contact";

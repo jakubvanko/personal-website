@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 
 import useWindowDimensions from "../../scripts/hooks/useWindowDimensions";
-import {HEADER_LINKS} from "../../scripts/constants/textData";
 
 import {Container, List, Anchor} from "./Header.styled";
 import Icon from "../Icon/Icon";
@@ -16,9 +15,11 @@ const Header = () => {
 
     return (
         <Container $mobileActive={isMobileActive}>
-            <Icon name={"signature"} $gridArea={"signature"}/>
+            <Icon name={"signature"} $gridArea={"signature"} as={"a"} href={"#home"}/>
             <List>
-                {HEADER_LINKS.map(({text, link}) => <li><Anchor href={link}>{text}</Anchor></li>)}
+                <li><Anchor href={"#about"}>ABOUT</Anchor></li>
+                <li><Anchor href={"#portfolio"}>PORTFOLIO</Anchor></li>
+                <li><Anchor href={"#contact"}>CONTACT</Anchor></li>
             </List>
             <Icon name={"hamburger"} $gridArea={"hamburger"} $display={width >= 768 && "none"}
                   onClick={() => handleClick()}/>
