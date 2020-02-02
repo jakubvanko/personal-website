@@ -4,7 +4,7 @@ import "./main.css"
 
 import Header from "./Header/Header";
 import Home from "./Home/Home";
-import About from "../scenes/About";
+import About from "./About/About";
 import Portfolio from "../scenes/Portfolio";
 import Contact from "../scenes/Contact";
 import Footer from "../scenes/Footer";

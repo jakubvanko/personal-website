@@ -9,6 +9,7 @@ export const Container = styled.div`
     align-items: center;
     position: relative;
     font-size: 16px;
+    overflow-x: hidden;
     
     @media only screen {
         @media (min-width: 992px) {
@@ -67,11 +68,15 @@ export const CenteredIconButton = styled(Icon)`
 
 export const TitleThin = styled.h1`
     letter-spacing: 3px;
-    font-size: 28px;
+    font-size: 23px;
     font-weight: 300;
     padding: 7px;
     
     @media only screen {
+        @media (min-width: 350px) {
+            font-size: 26px;
+        }
+    
         @media (min-width: 992px) {
             font-size: 3.75em;
             letter-spacing: 7px;

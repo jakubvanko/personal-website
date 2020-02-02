@@ -16,7 +16,7 @@ import bg_top from "./assets/bg_top.png"
 import bg_bottom from "./assets/bg_bottom.jpg"
 
 const Home = () => (
-    <Container>
+    <Container id={"#home"}>
         <TextContainer>
             <TitleThin>Jakub</TitleThin>
             <TitleBold>Vanko</TitleBold>
