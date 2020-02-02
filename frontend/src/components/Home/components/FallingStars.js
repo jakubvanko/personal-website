@@ -6,15 +6,15 @@ import useWindowDimensions from "../../../scripts/hooks/useWindowDimensions";
 const Star = styled(animated.div)`
     transform: rotateZ(45deg);
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: 3px;
+    height: 3px;
     background-color: white;
     z-index: -1;
     
     :before {
         width: 100px;
         background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(255,255,255,0.5) 100%);
-        height: 5px;
+        height: 3px;
         right: 1px;
         position: absolute;
         content: "";

@@ -10,10 +10,23 @@ export const Container = styled.div`
     position: relative;
     font-size: 16px;
     
-    @media only screen
-    and (min-width: 992px) {
-        @media (orientation: landscape) {
-            justify-content: left;
+    @media only screen {
+        @media (min-width: 992px) {
+            @media (orientation: landscape) {
+                justify-content: left;
+            }
+        }
+        
+        @media (min-width: 1300px) {
+            font-size: 21.3px;
+        }
+        
+        @media (min-width: 2700px) {
+            font-size: 53.3px;
+        }
+        
+        @media (min-width: 3100px) {
+            font-size: 64px;
         }
     }
 `;
@@ -44,34 +57,15 @@ export const TitleThin = styled.h1`
     
     @media only screen {
         @media (min-width: 992px) {
-            @media (orientation: landscape) {
-                font-size: 60px;
-                letter-spacing: 7px;
-                line-height: 80px;
-            }
+            font-size: 3.75em;
+            letter-spacing: 7px;
+            line-height: 80px;
         }
         
         @media (min-width: 1300px) {
             @media (orientation: landscape) {
-                font-size: 5em;
-                letter-spacing: 7/16em;
-                line-height: 110px;
-            }
-        }
-        
-        @media (min-width: 2700px) {
-            @media (orientation: landscape) {
-                font-size: 200px;
-                letter-spacing: 17px;
-                line-height: 330px;
-            }
-        }
-        
-        @media (min-width: 3100px) {
-            @media (orientation: landscape) {
-                font-size: 240px;
-                letter-spacing: 21px;
-                line-height: 330px;
+                letter-spacing: 0.0875em;
+                line-height: 1.38em;
             }
         }
     }
@@ -98,17 +92,9 @@ export const AdditionalText = styled.p`
         
         @media (min-width: 1300px) {
             @media (orientation: landscape) {
-                padding: 30px 50px;
-                font-size: 16px;
-                letter-spacing: 2.5px;
-            }
-        }
-        
-        @media (min-width: 3100px) {
-            @media (orientation: landscape) {
-                padding: 90px 150px;
-                font-size: 48px;
-                letter-spacing: 7.5px;
+                padding: 1.86em 3.125em;
+                font-size: 0.75em;
+                letter-spacing: 0.157em;
             }
         }
     }
@@ -127,7 +113,6 @@ export const TextContainer = styled.div`
         
         @media (min-width: 3100px) {
             @media (orientation: landscape) {
-                flex-direction: column;
                 padding-left: 8.5vw;
             }
         }
