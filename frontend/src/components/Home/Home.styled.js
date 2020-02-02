@@ -42,7 +42,7 @@ export const Container = styled.div`
         }
         
         @media (min-width: 3100px) {
-            font-size: 62px;
+            font-size: 1.331vw;
         }
     }
 `;
