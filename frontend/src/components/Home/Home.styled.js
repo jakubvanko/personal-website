@@ -8,9 +8,13 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
+    font-size: 16px;
     
-    @media only screen and (min-width: 768px) {
-        justify-content: left;
+    @media only screen
+    and (min-width: 992px) {
+        @media (orientation: landscape) {
+            justify-content: left;
+        }
     }
 `;
 
@@ -24,8 +28,11 @@ export const CenteredIconButton = styled(Icon)`
     display: flex;
     justify-content: center;
     
-    @media only screen and (min-width: 768px) {
-        display: none;
+    @media only screen
+    and (min-width: 992px) {
+        @media (orientation: landscape) {
+            display: none;
+        }
     }
 `;
 
@@ -35,43 +42,100 @@ export const TitleThin = styled.h1`
     font-weight: 300;
     padding: 7px;
     
-    @media only screen and (min-width: 768px) {
-        font-size: 80px;
-        letter-spacing: 7px;
-        line-height: 110px;
+    @media only screen {
+        @media (min-width: 992px) {
+            @media (orientation: landscape) {
+                font-size: 60px;
+                letter-spacing: 7px;
+                line-height: 80px;
+            }
+        }
+        
+        @media (min-width: 1300px) {
+            @media (orientation: landscape) {
+                font-size: 5em;
+                letter-spacing: 7/16em;
+                line-height: 110px;
+            }
+        }
+        
+        @media (min-width: 2700px) {
+            @media (orientation: landscape) {
+                font-size: 200px;
+                letter-spacing: 17px;
+                line-height: 330px;
+            }
+        }
+        
+        @media (min-width: 3100px) {
+            @media (orientation: landscape) {
+                font-size: 240px;
+                letter-spacing: 21px;
+                line-height: 330px;
+            }
+        }
     }
 `;
 
 export const TitleBold = styled(TitleThin)`
     font-weight: 600;
-    
-    @media only screen and (min-width: 768px) {
-        align-self: flex-end;
-    }
+    align-self: flex-end;
 `;
 
 export const AdditionalText = styled.p`
     display: none;
     font-weight: 300;
-    padding: 30px 50px;
-    font-size: 16px;
-    letter-spacing: 2.5px;
-
-    @media only screen and (min-width: 768px) {
-        display: inline-block;
+    
+    @media only screen {
+        @media (min-width: 992px) {
+            @media (orientation: landscape) {
+                display: inline-block;
+                padding: 30px 30px;
+                font-size: 15px;
+                letter-spacing: 2.5px;
+            }
+        }
+        
+        @media (min-width: 1300px) {
+            @media (orientation: landscape) {
+                padding: 30px 50px;
+                font-size: 16px;
+                letter-spacing: 2.5px;
+            }
+        }
+        
+        @media (min-width: 3100px) {
+            @media (orientation: landscape) {
+                padding: 90px 150px;
+                font-size: 48px;
+                letter-spacing: 7.5px;
+            }
+        }
     }
 `;
 
 export const TextContainer = styled.div`
     display: flex;
     
-    @media only screen and (min-width: 768px) {
-        flex-direction: column;
-        padding-left: 11vw;
+    @media only screen {
+        @media (min-width: 992px) {
+            @media (orientation: landscape) {
+                flex-direction: column;
+                padding-left: 11vw;
+            }
+        }
+        
+        @media (min-width: 3100px) {
+            @media (orientation: landscape) {
+                flex-direction: column;
+                padding-left: 8.5vw;
+            }
+        }
     }
 `;
 
 export const PositionedBackground = styled.div`
+    display: none;
     position: absolute;
     z-index: -1;
     overflow: hidden;
@@ -80,8 +144,63 @@ export const PositionedBackground = styled.div`
     
     svg {
         position: absolute;
+        height: 100vh;
         top: 0;
-        right: 0;
+        right: -40vw;
         z-index: -1;
+    }
+    
+    @media only screen {
+        @media (orientation: landscape) and (min-width: 992px) {
+            display: block;
+        }
+        
+        @media (min-aspect-ratio: 21/20) {
+            svg {
+                right: -30vw;
+            }
+        }
+        
+        @media (min-aspect-ratio: 11/10) {
+            svg {
+                right: -27vw;
+            }
+        }
+        
+        @media (min-aspect-ratio: 12/10) {
+            svg {
+                right: -23vw;
+            }
+        }
+        
+        @media (min-aspect-ratio: 13/10) {
+            svg {
+                right: -18vw;
+            }
+        }
+        
+        @media (min-aspect-ratio: 14/10) {
+            svg {
+                right: -14vw;
+            }
+        }
+        
+        @media (min-aspect-ratio: 15/10) {
+            svg {
+                right: -9vw;
+            }
+        }
+        
+        @media (min-aspect-ratio: 16/10) {
+            svg {
+                right: -5vw;
+            }
+        }
+        
+        @media (min-aspect-ratio: 17/10) {
+            svg {
+                right: 0;
+            }
+        }
     }
 `;

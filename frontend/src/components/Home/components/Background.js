@@ -1,7 +1,7 @@
 import React from "react";
 
 const Background = ({background, ...props}) => (
-    <svg xmlns="http://www.w3.org/2000/svg" height="100vh" viewBox="0 0 1077.18 1080" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1077.18 1080" {...props}>
         <defs>
             <pattern id={background} width="1" height="1">
                 <image href={background} width="1077.18" height="1080" preserveAspectRatio="xMidYMid slice"/>

@@ -21,7 +21,7 @@ const Header = () => {
                 <li><Anchor href={"#portfolio"}>PORTFOLIO</Anchor></li>
                 <li><Anchor href={"#contact"}>CONTACT</Anchor></li>
             </List>
-            <Icon name={"hamburger"} $gridArea={"hamburger"} $display={width >= 768 && "none"}
+            <Icon name={"hamburger"} $gridArea={"hamburger"} $display={width >= 992 && "none"}
                   onClick={() => handleClick()}/>
         </Container>
     )

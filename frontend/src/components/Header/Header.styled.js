@@ -19,7 +19,7 @@ export const Container = styled.header`
     transition: height 0.3s;
     text-transform: uppercase;
     
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 992px) {
         align-items: center;
     }
 `;
@@ -35,7 +35,7 @@ export const List = styled.ul`
     grid-template-rows: auto auto auto;
     grid-area: mobile;
     
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 992px) {
         grid-template-columns: auto auto auto;
         grid-area: desktop;
     }
