@@ -6,15 +6,16 @@ import useWindowDimensions from "../../../scripts/hooks/useWindowDimensions";
 const Star = styled(animated.div)`
     transform: rotateZ(45deg);
     position: absolute;
-    width: 3px;
-    height: 3px;
+    width: ${props => props.$size || 3}px;
+    height: ${props => props.$size || 3}px;
+    border-radius: 5px;
     background-color: white;
     z-index: -1;
     
     :before {
         width: 100px;
         background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(255,255,255,0.5) 100%);
-        height: 3px;
+        height: ${props => props.$size || 3}px;
         right: 1px;
         position: absolute;
         content: "";
@@ -43,7 +44,7 @@ const generateEndingAxes = (width, height, startingAxes) => {
     }
 };
 
-const FallingStar = () => {
+const FallingStar = ({...props}) => {
     const [width, height] = useWindowDimensions();
     const [startingAxes, setStartingAxes] = useState(generateStartingAxes(width));
     const [endingAxes, setEndingAxes] = useState(generateEndingAxes(width, height, startingAxes));
@@ -64,14 +65,14 @@ const FallingStar = () => {
     });
 
     return (
-        <Star style={animationStyle}/>
+        <Star style={animationStyle} {...props}/>
     );
 };
 
 const FallingStars = () => {
     let starArray = [];
     for (let i = 0; i < 20; i++) {
-        starArray.push(<FallingStar key={i}/>)
+        starArray.push(<FallingStar $size={Math.ceil(Math.random() * 4)} key={i}/>)
     }
     return (
         <>

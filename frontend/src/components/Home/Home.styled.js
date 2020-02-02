@@ -21,12 +21,28 @@ export const Container = styled.div`
             font-size: 21.3px;
         }
         
-        @media (min-width: 2700px) {
-            font-size: 53.3px;
+        @media (min-width: 1700px) {
+            font-size: 28px;
+        }
+        
+        @media (min-width: 2000px) {
+            font-size: 32px;
+        }
+        
+        @media (min-width: 2300px) {
+            font-size: 38px;
+        }
+        
+        @media (min-width: 2600px) {
+            font-size: 46px;
+        }
+        
+        @media (min-width: 2800px) {
+            font-size: 54px;
         }
         
         @media (min-width: 3100px) {
-            font-size: 64px;
+            font-size: 62px;
         }
     }
 `;
@@ -111,7 +127,7 @@ export const TextContainer = styled.div`
             }
         }
         
-        @media (min-width: 3100px) {
+        @media (min-width: 2600px) {
             @media (orientation: landscape) {
                 padding-left: 8.5vw;
             }
