@@ -4,7 +4,7 @@ export const Container = styled.div`
     height: 300vh;
     position: relative;
     padding: 0 30px;
-    max-width: 100vw;
+    max-width:100%;
     font-size: 14px;
     
     @media only screen {

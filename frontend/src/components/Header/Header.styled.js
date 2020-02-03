@@ -6,6 +6,7 @@ export const Container = styled.header`
     left: 0;
     z-index: 10;
     width: 100vw;
+    max-width: 100%;
     height: ${props => props.$mobileActive ? "250px" : "50px"};
     background-color: ${props => (props.$scrolled || props.$mobileActive) ? "white" : "transparent"};
     box-shadow: ${props => (props.$scrolled || props.$mobileActive) && "0 3px 6px #00000066"};

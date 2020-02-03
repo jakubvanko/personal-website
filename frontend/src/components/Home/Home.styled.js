@@ -144,9 +144,9 @@ export const PositionedBackground = styled.div`
     display: none;
     position: absolute;
     z-index: -1;
-    overflow: hidden;
     height: 100vh;
     width: 100vw;
+    max-width: 100%;
     
     svg {
         position: absolute;
