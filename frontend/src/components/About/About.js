@@ -1,12 +1,12 @@
 import React from "react";
 
-import {Container, Heading, Text, SubHeading, ListContainer} from "./About.styled";
+import {Container, Heading, Text, SubHeading, ListContainer, ListText} from "./About.styled";
 
 const TEXT = `
 I am a full-stack software developer with programming experience of over 3 years. 
-I specialize in utilizing modern web technologies to provide users with a seamless browsing experience. 
-My main focal point is the MERN stack (Mongo, Express, React and Node.js), 
-but I also do not shy away from trying out other cutting-edge technologies such as machine learning 
+My main focal point is the utilization of modern web technologies along with time-tested 
+programming methodologies to provide users with a spectacular browsing experience. 
+I am also passionate about experimenting with cutting-edge techniques such as machine learning 
 to push my endeavours into the tiers of the highest quality.
 `;
 
@@ -31,13 +31,13 @@ const About = () => (
         <ListContainer>
             <div>
                 <SubHeading>Areas of expertise</SubHeading>
-                {AREAS.map(text => <Text key={text}>{text}</Text>)}
+                {AREAS.map(text => <ListText key={text}>{text}</ListText>)}
             </div>
             <div>
                 <SubHeading>Certifications</SubHeading>
-                {CERTIFICATIONS.map(({text, link}) => <Text as={"a"} href={link} target={"_blank"}
+                {CERTIFICATIONS.map(({text, link}) => <ListText as={"a"} href={link} target={"_blank"}
                                                             rel={"noopener noreferrer"}
-                                                            key={text}>{text}</Text>)}
+                                                            key={text}>{text}</ListText>)}
             </div>
         </ListContainer>
     </Container>
