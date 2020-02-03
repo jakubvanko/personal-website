@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Container, Heading, Text, SubHeading} from "./About.styled";
+import {Container, Heading, Text, SubHeading, ListContainer} from "./About.styled";
 
 const TEXT = `
 I am a full-stack software developer with programming experience of over 3 years. 
@@ -28,11 +28,18 @@ const About = () => (
     <Container id={"about"}>
         <Heading>About me</Heading>
         <Text>{TEXT}</Text>
-        <SubHeading>Areas of expertise</SubHeading>
-        {AREAS.map(text => <Text key={text}>{text}</Text>)}
-        <SubHeading>Certifications</SubHeading>
-        {CERTIFICATIONS.map(({text, link}) => <Text as={"a"} href={link} target={"_blank"} rel={"noopener noreferrer"}
-                                                    key={text}>{text}</Text>)}
+        <ListContainer>
+            <div>
+                <SubHeading>Areas of expertise</SubHeading>
+                {AREAS.map(text => <Text key={text}>{text}</Text>)}
+            </div>
+            <div>
+                <SubHeading>Certifications</SubHeading>
+                {CERTIFICATIONS.map(({text, link}) => <Text as={"a"} href={link} target={"_blank"}
+                                                            rel={"noopener noreferrer"}
+                                                            key={text}>{text}</Text>)}
+            </div>
+        </ListContainer>
     </Container>
 );
 
