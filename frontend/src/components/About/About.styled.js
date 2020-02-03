@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     padding: 0 30px;
-    max-width:100%;
+    max-width: 100%;
     position: relative;
     font-size: 14px;
     
@@ -13,9 +13,6 @@ export const Container = styled.div`
     
         @media (min-width: 992px) {
             font-size: 1.16vw;
-        }
-    
-        @media (min-width: 992px) {
             padding: 50px 6.875vw 0 5vw;
             display: grid;
             grid-template-columns: auto auto auto;

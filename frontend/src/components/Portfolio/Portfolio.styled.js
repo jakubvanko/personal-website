@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    height: 300vh;
     position: relative;
     padding: 0 30px;
-    max-width:100%;
+    max-width: 100%;
     font-size: 14px;
     
     @media only screen {
@@ -14,11 +13,9 @@ export const Container = styled.div`
     
         @media (min-width: 992px) {
             font-size: 1.16vw;
-        }
-    
-        @media (min-width: 992px) {
-            padding: 50px 6.875vw 0 5vw;
+            padding: 0 6.875vw 0 5vw;
             min-height: 100vh;
+            display: flex;
         }
     }
 `;
@@ -26,11 +23,20 @@ export const Container = styled.div`
 export const StickyHeadingContainer = styled.div`
     @media only screen {
         @media (min-width: 992px) {
+            padding-top: 50px;
             position: sticky;
-            top: 40px;
+            top: 0;
             height: 100vh;
             display: flex;
             align-items: center;
+        }
+    }
+`;
+
+export const ProjectContainer = styled.div`
+    @media only screen {
+        @media (min-width: 992px) {
+            height: 100vh;
         }
     }
 `;
