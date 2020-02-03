@@ -1,6 +1,7 @@
 import React from "react";
 
 import {Container, Heading, Text, SubHeading, ListContainer, ListText} from "./About.styled";
+import SectionLine from "../SectionLine/SectionLine";
 
 const TEXT = `
 I am a full-stack software developer with programming experience of over 3 years. 
@@ -26,6 +27,7 @@ const CERTIFICATIONS = [{
 
 const About = () => (
     <Container id={"about"}>
+        <SectionLine $color={"#525F95"} />
         <Heading>About me</Heading>
         <Text>{TEXT}</Text>
         <ListContainer>

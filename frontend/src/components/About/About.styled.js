@@ -22,17 +22,6 @@ export const Container = styled.div`
             grid-template-areas: "heading text lists";
             align-items: center;
             grid-column-gap: 10vw;
-        
-            :before {
-                height: 100%;
-                background-color: #525F95;
-                width: 1.875vw;
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: "";
-                box-shadow: 3px 0 5px rgba(0,0,0,0.3);
-            }
             min-height: 100vh;
             
             @media (orientation: portrait) {
