@@ -15,6 +15,7 @@ const Main = () => (
         <Home/>
         <About/>
         <Portfolio/>
+            <About/>
         <Contact/>
         <Footer/>
     </>
