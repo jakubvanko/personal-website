@@ -16,20 +16,25 @@ const Header = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const handleClick = () => {
+    const handleButtonClick = () => {
         setMobileActive(!isMobileActive);
+    };
+
+    const handleLinkClick=  () => {
+        setScrolled(true);
+        setMobileActive(false);
     };
 
     return (
         <Container $mobileActive={isMobileActive} $scrolled={isScrolled}>
             <Icon name={"signature"} $gridArea={"signature"} as={"a"} href={"#home"}/>
             <List>
-                <li><Anchor href={"#about"} onClick={() => handleClick()}>ABOUT</Anchor></li>
-                <li><Anchor href={"#portfolio"} onClick={() => handleClick()}>PORTFOLIO</Anchor></li>
-                <li><Anchor href={"#contact"} onClick={() => handleClick()}>CONTACT</Anchor></li>
+                <li><Anchor href={"#about"} onClick={() => handleLinkClick()}>ABOUT</Anchor></li>
+                <li><Anchor href={"#portfolio"} onClick={() => handleLinkClick()}>PORTFOLIO</Anchor></li>
+                <li><Anchor href={"#contact"} onClick={() => handleLinkClick()}>CONTACT</Anchor></li>
             </List>
             <Icon name={"hamburger"} $gridArea={"hamburger"} $display={width >= 992 && "none"}
-                  onClick={() => handleClick()}/>
+                  onClick={() => handleButtonClick()}/>
         </Container>
     )
 };
