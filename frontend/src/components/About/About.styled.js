@@ -111,7 +111,7 @@ export const SubHeading = styled.h2`
 export const ListContainer = styled.div`
     @media only screen {
         @media (min-width: 992px) {
-            padding: 0 2.5vw;
+            padding: 0 3vw;
             height: 75%;
             display: flex;
             flex-direction: column;
