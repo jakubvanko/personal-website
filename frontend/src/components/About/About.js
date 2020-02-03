@@ -1,7 +1,8 @@
 import React from "react";
 
-import {Container, Heading, Text, SubHeading, ListContainer, ListText} from "./About.styled";
+import {Container, Text, SubHeading, ListContainer, ListText} from "./About.styled";
 import SectionLine from "../SectionLine/SectionLine";
+import Heading from "../Heading/Heading";
 
 const TEXT = `
 I am a full-stack software developer with programming experience of over 3 years. 
