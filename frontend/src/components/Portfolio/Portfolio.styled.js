@@ -70,7 +70,7 @@ export const ProjectDataContainer = styled.div`
             grid-template-areas: "live" "text" "code";
             grid-template-rows: min-content min-content min-content;
             grid-template-columns: auto;
-            grid-row-gap: 40px;
+            grid-row-gap: 5vh;
             padding: 0 3vw;
         }
     }
