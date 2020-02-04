@@ -23,6 +23,8 @@ export const StickyHeadingContainer = styled.div`
             height: 100vh;
             display: flex;
             align-items: center;
+            // If something breaks try removing the next line
+            width: fit-content;
         }
     }
 `;
@@ -36,6 +38,13 @@ export const ProjectContainer = styled.div`
             grid-template-rows: auto;
             grid-template-areas: "heading rest";
             align-items: center;
+            
+            @media (orientation: portrait) {
+                grid-template-areas: "heading" "rest";
+                grid-template-rows: auto auto;
+                grid-template-columns: auto;
+                padding: 5vh 5vw;
+            }
         }
     }
 `;
@@ -72,6 +81,10 @@ export const ProjectDataContainer = styled.div`
             grid-template-columns: auto;
             grid-row-gap: 5vh;
             padding: 0 3vw;
+            
+            @media (orientation: portrait) {
+                align-self: flex-start;
+            }
         }
     }
 `;
