@@ -6,7 +6,10 @@ const Button = styled.button`
     background-color: white;
     width: 100%;
     height: 50px;
-    font-size: 15px;
+    font-size: 1em;
+    font-weight: normal;
+    grid-area: ${props => props.$gridArea && props.$gridArea};
+    cursor: pointer;
 `;
 
 export default Button;

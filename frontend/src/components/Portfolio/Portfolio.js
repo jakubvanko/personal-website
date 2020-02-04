@@ -3,15 +3,14 @@ import React from "react";
 import {
     Container,
     StickyHeadingContainer,
-    AllProjectsContainer,
     ProjectContainer,
     ProjectHeading,
-    Button,
     ProjectDataContainer
 } from "./Portfolio.styled";
 import SectionLine from "../SectionLine/SectionLine";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
+import Button from "../Button/Button";
 
 const PROJECTS = [{
     title: "Spektrum",
@@ -36,31 +35,13 @@ const PROJECTS = [{
     linkCode: "https://github.com/jakubvanko/project-minecraft-gender"
 }];
 
-/*
-, {
-    title: "CommonCore Plugins",
-    text: `Java game plugins downloaded over 6000+ times and currently running on 100+ servers.
-    Includes a custom code library, complete user configurability, support for 3rd party
-    modifications, full documentation and tutorials.`,
-    linkLive: "",
-    linkCode: "https://github.com/jakubvanko/minecraft-plugins"
-}, {
-    title: "Minecraft Gender Rec.",
-    text: `A web application for AI gender recognition of Minecraft player skins.
-    Written in MERN stack and includes a RESTful web API, GraphQL endpoint, custom
-    dataset, multiple machine learning algorithms and 3rd party API integration.`,
-    linkLive: "",
-    linkCode: "https://github.com/jakubvanko/project-minecraft-gender"
-}
- */
-
 const Portfolio = () => (
     <Container id={"portfolio"}>
         <SectionLine $color={"#D6ACD5"}/>
         <StickyHeadingContainer>
             <Heading>Portfolio</Heading>
         </StickyHeadingContainer>
-        <AllProjectsContainer>
+        <div>
             {PROJECTS.map(({title, text, linkLive, linkCode}) => (
                 <ProjectContainer key={title}>
                     <ProjectHeading>{title}</ProjectHeading>
@@ -71,7 +52,7 @@ const Portfolio = () => (
                     </ProjectDataContainer>
                 </ProjectContainer>
             ))}
-        </AllProjectsContainer>
+        </div>
     </Container>
 );
 

@@ -27,10 +27,6 @@ export const StickyHeadingContainer = styled.div`
     }
 `;
 
-export const AllProjectsContainer = styled.div`
-
-`;
-
 export const ProjectContainer = styled.div`
     @media only screen {   
         @media (min-width: 992px) {
@@ -78,16 +74,4 @@ export const ProjectDataContainer = styled.div`
             padding: 0 3vw;
         }
     }
-`;
-
-export const Button = styled.button`
-    box-shadow: 0 3px 6px #00000066;
-    border: none;
-    background-color: white;
-    width: 100%;
-    height: 50px;
-    font-size: 1em;
-    font-weight: normal;
-    grid-area: ${props => props.$gridArea && props.$gridArea};
-    cursor: pointer;
 `;
