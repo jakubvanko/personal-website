@@ -58,10 +58,10 @@ export const ProjectHeading = styled.h2`
     grid-area: heading;
     
     @media (min-width: 992px) {
-        font-size: 4.3vh;
+        font-size: 2.1vw;
         text-transform: uppercase;
         text-align: center;
-        letter-spacing: 11px;
+        letter-spacing: 10px;
     }
 `;
 

@@ -5,7 +5,8 @@ const Button = styled.button`
     border: none;
     background-color: white;
     width: 100%;
-    height: 50px;
+    min-height: 50px;
+    height: 6.33vh;
     font-size: 1em;
     font-weight: normal;
     grid-area: ${props => props.$gridArea && props.$gridArea};
