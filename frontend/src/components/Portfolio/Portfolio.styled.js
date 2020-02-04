@@ -36,7 +36,7 @@ export const ProjectContainer = styled.div`
         @media (min-width: 992px) {
             height: 100vh;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 3fr 2fr;
             grid-template-rows: auto;
             grid-template-areas: "heading rest";
             align-items: center;
@@ -53,9 +53,10 @@ export const ProjectHeading = styled.h2`
     grid-area: heading;
     
     @media (min-width: 992px) {
-        font-size: 4.5vh;
+        font-size: 4.3vh;
         text-transform: uppercase;
         text-align: center;
+        letter-spacing: 11px;
     }
 `;
 
@@ -73,6 +74,8 @@ export const ProjectDataContainer = styled.div`
             grid-template-areas: "live" "text" "code";
             grid-template-rows: min-content min-content min-content;
             grid-template-columns: auto;
+            grid-row-gap: 40px;
+            padding: 0 3vw;
         }
     }
 `;
