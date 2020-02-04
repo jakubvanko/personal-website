@@ -27,19 +27,18 @@ export const StickyHeadingContainer = styled.div`
     }
 `;
 
-export const ProjectContainer = styled.div`
-    display: grid;
-    grid-template-areas: "heading heading" "text text" "live code";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    padding-bottom: 36px;
+export const AllProjectsContainer = styled.div`
 
-    @media only screen {
+`;
+
+export const ProjectContainer = styled.div`
+    @media only screen {   
         @media (min-width: 992px) {
             height: 100vh;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "heading rest";
             align-items: center;
         }
     }
@@ -49,9 +48,33 @@ export const ProjectHeading = styled.h2`
     font-weight: 600;
     letter-spacing: 2px;
     font-size: 20px;
-    padding: 20px 0 5px 10px;
+    padding: 20px 0 20px 0;
     color: #707070;
     grid-area: heading;
+    
+    @media (min-width: 992px) {
+        font-size: 4.5vh;
+        text-transform: uppercase;
+        text-align: center;
+    }
+`;
+
+export const ProjectDataContainer = styled.div`
+    display: grid;
+    grid-template-areas: "text text" "live code";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding-bottom: 36px;
+    
+    @media only screen {   
+        @media (min-width: 992px) {
+            grid-template-areas: "live" "text" "code";
+            grid-template-rows: min-content min-content min-content;
+            grid-template-columns: auto;
+        }
+    }
 `;
 
 export const Button = styled.button`

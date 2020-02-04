@@ -1,6 +1,14 @@
 import React from "react";
 
-import {Container, StickyHeadingContainer, ProjectContainer, ProjectHeading, Button} from "./Portfolio.styled";
+import {
+    Container,
+    StickyHeadingContainer,
+    AllProjectsContainer,
+    ProjectContainer,
+    ProjectHeading,
+    Button,
+    ProjectDataContainer
+} from "./Portfolio.styled";
 import SectionLine from "../SectionLine/SectionLine";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
@@ -12,21 +20,25 @@ const PROJECTS = [{
     login system, form validation and a custom content management system.`,
     linkLive: "",
     linkCode: "https://github.com/jakubvanko/spektrum"
-}, {
+}];
+
+/*
+, {
     title: "CommonCore Plugins",
-    text: `Java game plugins downloaded over 6000+ times and currently running on 100+ servers. 
-    Includes a custom code library, complete user configurability, support for 3rd party 
+    text: `Java game plugins downloaded over 6000+ times and currently running on 100+ servers.
+    Includes a custom code library, complete user configurability, support for 3rd party
     modifications, full documentation and tutorials.`,
     linkLive: "",
     linkCode: "https://github.com/jakubvanko/minecraft-plugins"
 }, {
     title: "Minecraft Gender Rec.",
-    text: `A web application for AI gender recognition of Minecraft player skins. 
-    Written in MERN stack and includes a RESTful web API, GraphQL endpoint, custom 
+    text: `A web application for AI gender recognition of Minecraft player skins.
+    Written in MERN stack and includes a RESTful web API, GraphQL endpoint, custom
     dataset, multiple machine learning algorithms and 3rd party API integration.`,
     linkLive: "",
     linkCode: "https://github.com/jakubvanko/project-minecraft-gender"
-}];
+}
+ */
 
 const Portfolio = () => (
     <Container id={"portfolio"}>
@@ -34,14 +46,18 @@ const Portfolio = () => (
         <StickyHeadingContainer>
             <Heading>Portfolio</Heading>
         </StickyHeadingContainer>
-        {PROJECTS.map(({title, text, linkLive, linkCode}) => (
-            <ProjectContainer>
-                <ProjectHeading>{title}</ProjectHeading>
-                <Text $gridArea={"text"}>{text}</Text>
-                <Button $gridArea={"live"}>Live version</Button>
-                <Button $gridArea={"code"}>Code</Button>
-            </ProjectContainer>
-        ))}
+        <AllProjectsContainer>
+            {PROJECTS.map(({title, text, linkLive, linkCode}) => (
+                <ProjectContainer key={title}>
+                    <ProjectHeading>{title}</ProjectHeading>
+                    <ProjectDataContainer>
+                        <Text $gridArea={"text"}>{text}</Text>
+                        <Button $gridArea={"live"}>Live version</Button>
+                        <Button $gridArea={"code"}>Code</Button>
+                    </ProjectDataContainer>
+                </ProjectContainer>
+            ))}
+        </AllProjectsContainer>
     </Container>
 );
 
