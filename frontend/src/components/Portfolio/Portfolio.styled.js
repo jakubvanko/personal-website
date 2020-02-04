@@ -4,15 +4,9 @@ export const Container = styled.div`
     position: relative;
     padding: 0 30px;
     max-width: 100%;
-    font-size: 14px;
     
-    @media only screen {
-        @media (min-width: 400px) {
-            font-size: 15px;
-        }
-    
+    @media only screen {    
         @media (min-width: 992px) {
-            font-size: 1.16vw;
             padding: 0 6.875vw 0 5vw;
             min-height: 100vh;
             display: flex;
@@ -37,6 +31,44 @@ export const ProjectContainer = styled.div`
     @media only screen {
         @media (min-width: 992px) {
             height: 100vh;
+            display: flex;
+            align-items: center;
         }
     }
+`;
+
+export const ProjectHeading = styled.h2`
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding: 20px 0 20px 10px;
+    color: #707070;
+`;
+
+export const Text = styled.p`
+    color: black;
+    text-decoration: none;
+    display: block;
+    letter-spacing: 0.042em;
+    line-height: 1.68em;
+    
+    @media only screen {
+        @media (min-width: 992px) {
+            text-align: center;
+            
+            @media (orientation: portrait) {
+                font-size: 1.8em;
+                align-self: flex-end;
+            }
+        }
+    }
+`;
+
+export const Button = styled.button`
+    box-shadow: 0 3px 6px #00000066;
+    border: none;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
 `;

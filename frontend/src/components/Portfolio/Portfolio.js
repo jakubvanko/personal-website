@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Container, StickyHeadingContainer, ProjectContainer} from "./Portfolio.styled";
+import {Container, StickyHeadingContainer, ProjectContainer, ProjectHeading, Text, Button} from "./Portfolio.styled";
 import SectionLine from "../SectionLine/SectionLine";
 import Heading from "../Heading/Heading";
 
@@ -29,11 +29,6 @@ const PROJECTS = [{
 
 /*
 {PROJECTS.map(({title, text, linkLive, linkCode}) => (
-            <ProjectContainer>
-                <svg>
-                    <text>Test</text>
-                </svg>
-            </ProjectContainer>
 
             /*<ProjectContainer>
                 <ProjectTitle></ProjectTitle>
@@ -44,6 +39,7 @@ const PROJECTS = [{
 ))}
  */
 
+
 const Portfolio = () => (
     <Container id={"portfolio"}>
         <SectionLine $color={"#D6ACD5"}/>
@@ -51,6 +47,14 @@ const Portfolio = () => (
             <Heading>Portfolio</Heading>
         </StickyHeadingContainer>
         <ProjectContainer>
+            <ProjectHeading>
+                Spektrum
+            </ProjectHeading>
+            <Text>
+                A full-stack web application for concert venue and ticket ordering.
+                Written in MERN stack and includes a RESTful web API, GraphQL endpoint, token
+                login system, form validation and a custom content management system.
+            </Text>
         </ProjectContainer>
     </Container>
 );
