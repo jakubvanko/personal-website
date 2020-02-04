@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Text from "../Text/Text";
 
 export const Container = styled.div`
     padding: 0 30px;

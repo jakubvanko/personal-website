@@ -28,6 +28,14 @@ export const StickyHeadingContainer = styled.div`
 `;
 
 export const ProjectContainer = styled.div`
+    display: grid;
+    grid-template-areas: "heading heading" "text text" "live code";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding-bottom: 36px;
+
     @media only screen {
         @media (min-width: 992px) {
             height: 100vh;
@@ -41,8 +49,9 @@ export const ProjectHeading = styled.h2`
     font-weight: 600;
     letter-spacing: 2px;
     font-size: 20px;
-    padding: 20px 0 20px 10px;
+    padding: 20px 0 5px 10px;
     color: #707070;
+    grid-area: heading;
 `;
 
 export const Button = styled.button`
@@ -51,5 +60,8 @@ export const Button = styled.button`
     background-color: white;
     width: 100%;
     height: 50px;
-    font-size: 15px;
+    font-size: 1em;
+    font-weight: normal;
+    grid-area: ${props => props.$gridArea && props.$gridArea};
+    cursor: pointer;
 `;

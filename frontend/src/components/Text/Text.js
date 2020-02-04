@@ -6,6 +6,7 @@ const Text = styled.p`
     display: block;
     letter-spacing: 0.042em;
     line-height: 1.68em;
+    grid-area: ${props => props.$gridArea && props.$gridArea};
     
     @media only screen {
         @media (min-width: 992px) {
