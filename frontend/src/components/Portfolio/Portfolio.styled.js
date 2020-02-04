@@ -45,25 +45,6 @@ export const ProjectHeading = styled.h2`
     color: #707070;
 `;
 
-export const Text = styled.p`
-    color: black;
-    text-decoration: none;
-    display: block;
-    letter-spacing: 0.042em;
-    line-height: 1.68em;
-    
-    @media only screen {
-        @media (min-width: 992px) {
-            text-align: center;
-            
-            @media (orientation: portrait) {
-                font-size: 1.8em;
-                align-self: flex-end;
-            }
-        }
-    }
-`;
-
 export const Button = styled.button`
     box-shadow: 0 3px 6px #00000066;
     border: none;

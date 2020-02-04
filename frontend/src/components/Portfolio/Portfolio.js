@@ -1,8 +1,9 @@
 import React from "react";
 
-import {Container, StickyHeadingContainer, ProjectContainer, ProjectHeading, Text, Button} from "./Portfolio.styled";
+import {Container, StickyHeadingContainer, ProjectContainer, ProjectHeading, Button} from "./Portfolio.styled";
 import SectionLine from "../SectionLine/SectionLine";
 import Heading from "../Heading/Heading";
+import Text from "../Text/Text";
 
 const PROJECTS = [{
     title: "Spektrum",
