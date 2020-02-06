@@ -26,32 +26,30 @@ export const ContactContainer = styled(Text).attrs({
 export const ContactForm = styled.form`
     box-shadow: 0 3px 6px #00000066;
     width: 100%;
-    height: 100vw;
+    height: 50vh;
     position: relative;
-`;
-
-export const Input = styled.input`
-    font-size: 16px;
-    color: #707070;
-    border: none;
-    outline: none;
-    padding: 16px;
-    width: 100%;
-    border-bottom: 1px solid #70707026;
+    // Not sure about the margin here
+    margin: 1vh 0;
 `;
 
 export const TextArea = styled.textarea`
-    font-size: 16px;
+    font-size: 1.15em;
     color: #707070;
     border: none;
     outline: none;
-    padding: 15px;
+    padding: 1.1em;
     width: 100%;
 `;
 
+export const Input = styled(TextArea).attrs({
+    as: "input"
+})`
+    border-bottom: 1px solid #70707026;
+`;
+
 export const FormButton = styled(Button)`
-    width: 40vw;
+    width: 50%;
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: 1.2em;
+    right: 1.2em;
 `;
