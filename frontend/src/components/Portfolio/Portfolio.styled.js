@@ -1,14 +1,10 @@
 import styled from "styled-components";
+import SectionContainer from "../SectionContainer/SectionContainer";
 
-export const Container = styled.div`
-    position: relative;
-    padding: 0 30px;
-    max-width: 100%;
-    
+export const Container = styled(SectionContainer)`    
     @media only screen {    
         @media (min-width: 992px) {
-            padding: 0 6.875vw 0 5vw;
-            min-height: 100vh;
+            padding-top: 0;
             display: flex;
         }
     }

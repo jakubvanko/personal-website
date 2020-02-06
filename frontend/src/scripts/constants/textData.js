@@ -1,6 +1,5 @@
 export const TEXT_SECTIONS = {
     contact: {
-        title: "Contact",
         text: [{
             text: "kubko.vanko@gmail.com",
             link: ""

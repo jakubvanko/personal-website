@@ -1,20 +1,15 @@
 import styled from "styled-components";
 import Text from "../Text/Text";
+import SectionContainer from "../SectionContainer/SectionContainer";
 
-export const Container = styled.div`
-    padding: 0 30px;
-    max-width: 100%;
-    position: relative;
-    
+export const Container = styled(SectionContainer)`    
     @media only screen {
         @media (min-width: 992px) {
-            padding: 50px 6.875vw 0 5vw;
             display: grid;
             grid-template-columns: auto auto auto;
             grid-template-areas: "heading text lists";
             align-items: center;
             grid-column-gap: 10vw;
-            min-height: 100vh;
             
             @media (orientation: portrait) {
                 grid-template-columns: auto auto;
