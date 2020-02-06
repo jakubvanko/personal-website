@@ -30,6 +30,9 @@ export const ContactForm = styled.form`
     position: relative;
     // Not sure about the margin here
     margin: 1vh 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content min-content auto calc(2.4em + 6.4vh);
 `;
 
 export const TextArea = styled.textarea`
