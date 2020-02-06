@@ -1,8 +1,9 @@
 import React from "react";
 
-import {Container, SubHeading, ListContainer, ListText} from "./About.styled";
+import {Container, ListContainer, ListText} from "./About.styled";
 import SectionLine from "../SectionLine/SectionLine";
 import Heading from "../Heading/Heading";
+import HeadingSub from "../HeadingSub/HeadingSub";
 import Text from "../Text/Text";
 
 const TEXT = `
@@ -34,11 +35,11 @@ const About = () => (
         <Text>{TEXT}</Text>
         <ListContainer>
             <div>
-                <SubHeading>Areas of expertise</SubHeading>
+                <HeadingSub>Areas of expertise</HeadingSub>
                 {AREAS.map(text => <ListText key={text}>{text}</ListText>)}
             </div>
             <div>
-                <SubHeading>Certifications</SubHeading>
+                <HeadingSub>Certifications</HeadingSub>
                 {CERTIFICATIONS.map(({text, link}) => <ListText as={"a"} href={link} target={"_blank"}
                                                             rel={"noopener noreferrer"}
                                                             key={text}>{text}</ListText>)}

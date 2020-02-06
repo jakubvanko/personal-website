@@ -3,6 +3,7 @@ import React from "react";
 import {Container, AllContactsContainer, ContactContainer} from "./Contact.styled";
 import SectionLine from "../SectionLine/SectionLine";
 import Heading from "../Heading/Heading";
+import HeadingSub from "../HeadingSub/HeadingSub";
 import Icon from "../Icon/Icon";
 
 const CONTACTS = [{
@@ -31,6 +32,7 @@ const Contact = () => (
                 </ContactContainer>
             ))}
         </AllContactsContainer>
+        <HeadingSub>Send me a message</HeadingSub>
     </Container>
 );
 
