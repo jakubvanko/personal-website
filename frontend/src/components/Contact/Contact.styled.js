@@ -27,12 +27,19 @@ export const ContactForm = styled.form`
     box-shadow: 0 3px 6px #00000066;
     width: 100%;
     height: 50vh;
+    min-height: 20em;
     position: relative;
     // Not sure about the margin here
     margin: 1vh 0;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: min-content min-content auto calc(2.4em + 6.4vh);
+    grid-template-rows: min-content min-content auto calc(2.4em + 50px);
+    
+    @media only screen {
+        @media (min-height: 790px) {
+            grid-template-rows: min-content min-content auto calc(2.4em + 6.4vh);
+        }
+    }
 `;
 
 export const TextArea = styled.textarea`
