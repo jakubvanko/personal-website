@@ -25,6 +25,14 @@ export const StickyHeadingContainer = styled.div`
     }
 `;
 
+export const AllProjectsContainer = styled.div`
+    @media (max-width: 991px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 36px;
+    }
+`;
+
 export const ProjectContainer = styled.div`
     @media only screen {   
         @media (min-width: 992px) {
@@ -68,7 +76,6 @@ export const ProjectDataContainer = styled.div`
     grid-template-rows: auto auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    padding-bottom: 36px;
     
     @media only screen {   
         @media (min-width: 992px) {

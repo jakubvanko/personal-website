@@ -5,7 +5,8 @@ import {
     StickyHeadingContainer,
     ProjectContainer,
     ProjectHeading,
-    ProjectDataContainer
+    ProjectDataContainer,
+    AllProjectsContainer
 } from "./Portfolio.styled";
 import SectionLine from "../SectionLine/SectionLine";
 import Heading from "../Heading/Heading";
@@ -41,7 +42,7 @@ const Portfolio = () => (
         <StickyHeadingContainer>
             <Heading>Portfolio</Heading>
         </StickyHeadingContainer>
-        <div>
+        <AllProjectsContainer>
             {PROJECTS.map(({title, text, linkLive, linkCode}) => (
                 <ProjectContainer key={title}>
                     <ProjectHeading>{title}</ProjectHeading>
@@ -52,7 +53,7 @@ const Portfolio = () => (
                     </ProjectDataContainer>
                 </ProjectContainer>
             ))}
-        </div>
+        </AllProjectsContainer>
     </Container>
 );
 
