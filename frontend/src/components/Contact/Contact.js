@@ -1,6 +1,14 @@
 import React from "react";
 
-import {Container, AllContactsContainer, ContactContainer} from "./Contact.styled";
+import {
+    Container,
+    AllContactsContainer,
+    ContactContainer,
+    ContactForm,
+    TextArea,
+    Input,
+    FormButton
+} from "./Contact.styled";
 import SectionLine from "../SectionLine/SectionLine";
 import Heading from "../Heading/Heading";
 import HeadingSub from "../HeadingSub/HeadingSub";
@@ -33,6 +41,12 @@ const Contact = () => (
             ))}
         </AllContactsContainer>
         <HeadingSub>Send me a message</HeadingSub>
+        <ContactForm>
+            <Input placeholder={"NAME"}/>
+            <Input placeholder={"EMAIL"}/>
+            <TextArea placeholder={"MESSAGE"}/>
+            <FormButton>Send message</FormButton>
+        </ContactForm>
     </Container>
 );
 
