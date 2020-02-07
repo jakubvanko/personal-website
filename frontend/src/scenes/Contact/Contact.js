@@ -32,7 +32,7 @@ const CONTACTS = [{
 
 const Contact = () => {
     const [width] = useWindowDimensions();
-    const iconDimensions = width < 2400 ? "2em" : "3.5em";
+    const iconDimensions = width < 993 ? 18 : width < 2400 ? 26 : width < 3400 ? 60 : 100;
 
     return (
         <Container id={"contact"}>
@@ -41,7 +41,7 @@ const Contact = () => {
             <AllContactsContainer>
                 {CONTACTS.map(({icon, text, link}) => (
                     <ContactContainer key={text} href={link} target={"_blank"} rel={"noopener noreferrer"}>
-                        <Icon name={icon} height={iconDimensions} width={iconDimensions}/>
+                        <Icon name={icon} width={iconDimensions}/>
                         <p>{text}</p>
                     </ContactContainer>
                 ))}

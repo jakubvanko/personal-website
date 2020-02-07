@@ -18,11 +18,11 @@ const ICON_MAP = {
     signature: Signature
 };
 
-const Icon = ({name, width, height, ...props}) => {
+const Icon = ({name, width, ...props}) => {
     const IconComponent = ICON_MAP[name];
     return (
         <Container {...props}>
-            <IconComponent width={width} height={height}/>
+            <IconComponent width={width}/>
         </Container>
     )
 };

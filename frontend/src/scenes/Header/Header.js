@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
+import {Link} from "react-scroll";
 
 import useWindowDimensions from "../../scripts/hooks/useWindowDimensions";
 
-import {Container, List, Anchor} from "./Header.styled";
+import {Container, List} from "./Header.styled";
 import Icon from "../../components/Icon/Icon";
 
 const Header = () => {
@@ -25,13 +26,15 @@ const Header = () => {
         setMobileActive(false);
     };
 
+    const signatureWidth = Math.max(46.343, width / 100 * 2.5);
+
     return (
         <Container $mobileActive={isMobileActive} $scrolled={isScrolled}>
-            <Icon name={"signature"} $gridArea={"signature"} as={"a"} href={"#home"} width={"max(46.343px, 2.5vw)"} height={"auto"}/>
+            <Icon name={"signature"} $gridArea={"signature"} as={"a"} href={"#home"} width={signatureWidth}/>
             <List>
-                <li><Anchor href={"#about"} onClick={() => handleLinkClick()}>ABOUT</Anchor></li>
-                <li><Anchor href={"#portfolio"} onClick={() => handleLinkClick()}>PORTFOLIO</Anchor></li>
-                <li><Anchor href={"#contact"} onClick={() => handleLinkClick()}>CONTACT</Anchor></li>
+                <li><Link to={"about"} smooth={true} onClick={() => handleLinkClick()}>ABOUT</Link></li>
+                <li><Link to={"portfolio"} smooth={true} onClick={() => handleLinkClick()}>PORTFOLIO</Link></li>
+                <li><Link to={"contact"} smooth={true} onClick={() => handleLinkClick()}>CONTACT</Link></li>
             </List>
             <Icon name={"hamburger"} $gridArea={"hamburger"} $display={width >= 992 && "none"}
                   onClick={() => handleButtonClick()}/>

@@ -47,8 +47,3 @@ export const List = styled.ul`
         grid-area: desktop;
     }
 `;
-
-export const Anchor = styled.a`
-    color: black;
-    text-decoration: none;
-`;

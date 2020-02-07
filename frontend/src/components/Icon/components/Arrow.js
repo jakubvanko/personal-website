@@ -1,7 +1,7 @@
 import React from "react";
 
-const Arrow = ({width, height}) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={width || "24"} height={height || "15"} viewBox="0 0 24 15">
+const Arrow = ({width = 24}) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={width / 24 * 15} viewBox="0 0 24 15">
         <g transform="translate(-178 -639)">
             <g transform="translate(201.759 654) rotate(180)" fill="none">
                 <path d="M11.88,0l11.88,14H0Z" stroke="none"/>

@@ -41,7 +41,7 @@ export const ContactContainer = styled(Text).attrs({
     grid-template-columns: min-content auto;
     align-items: center;
     padding-left: 5px;
-    grid-column-gap: max(20px, 1.5vw);
+    grid-column-gap: max(15px, 1.5vw);
     
     font-size: 1.09em;
     line-height: 3.1em;
@@ -119,11 +119,11 @@ export const ContactForm = styled.form`
 `;
 
 export const TextArea = styled.textarea`
-    font-size: max(16px, 1.15em);
+    font-size: max(16px, 1em);
     color: #707070;
     border: none;
     outline: none;
-    padding: 1.1em;
+    padding: 1em;
     width: 100%;
     
     @media only screen {
