@@ -41,9 +41,14 @@ export const List = styled.ul`
     display: grid;
     grid-template-rows: auto auto auto;
     grid-area: mobile;
+    user-select: none;
     
     @media only screen and (min-width: 992px) {
         grid-template-columns: auto auto auto;
         grid-area: desktop;
+    }
+    
+    a {
+        cursor: pointer;
     }
 `;

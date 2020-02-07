@@ -1,4 +1,5 @@
 import React from "react";
+import {ScrollLink} from "react-scroll/modules";
 
 import {
     Container,
@@ -15,6 +16,8 @@ import FallingStars from "./components/FallingStars";
 import bg_top from "./assets/bg_top.png"
 import bg_bottom from "./assets/bg_bottom.jpg"
 
+const ScrollIcon = ScrollLink(CenteredIconButton);
+
 const Home = () => (
     <Container id={"home"}>
         <TextContainer>
@@ -27,7 +30,7 @@ const Home = () => (
             <FallingStars/>
             <Background background={bg_top}/>
         </PositionedBackground>
-        <CenteredIconButton name={"arrow"}/>
+        <ScrollIcon to={"about"} smooth={true} name={"arrow"}/>
     </Container>
 );
 

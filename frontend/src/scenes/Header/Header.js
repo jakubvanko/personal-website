@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from "react";
-import {Link} from "react-scroll";
+import {Link, ScrollLink} from "react-scroll";
 
 import useWindowDimensions from "../../scripts/hooks/useWindowDimensions";
 
 import {Container, List} from "./Header.styled";
 import Icon from "../../components/Icon/Icon";
+
+const ScrollIcon = ScrollLink(Icon);
 
 const Header = () => {
     const [isMobileActive, setMobileActive] = useState(false);
@@ -21,7 +23,7 @@ const Header = () => {
         setMobileActive(!isMobileActive);
     };
 
-    const handleLinkClick=  () => {
+    const handleLinkClick = () => {
         setScrolled(true);
         setMobileActive(false);
     };
@@ -30,7 +32,7 @@ const Header = () => {
 
     return (
         <Container $mobileActive={isMobileActive} $scrolled={isScrolled}>
-            <Icon name={"signature"} $gridArea={"signature"} as={"a"} href={"#home"} width={signatureWidth}/>
+            <ScrollIcon to={"home"} smooth={true} name={"signature"} $gridArea={"signature"} width={signatureWidth}/>
             <List>
                 <li><Link to={"about"} smooth={true} onClick={() => handleLinkClick()}>ABOUT</Link></li>
                 <li><Link to={"portfolio"} smooth={true} onClick={() => handleLinkClick()}>PORTFOLIO</Link></li>
