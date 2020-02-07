@@ -23,7 +23,11 @@ export const Container = styled.header`
     
     @media only screen and (min-width: 992px) {
         align-items: center;
-        height: 62px;
+        height: max(62px, 5vh);
+    }
+    
+    @media only screen and (min-width: 2000px) {
+        padding: 2vh 3vw 4vh 3vw;
     }
 `;
 
@@ -31,8 +35,8 @@ export const List = styled.ul`
     list-style: none;
     padding: 0;
     font-weight: bold;
-    grid-column-gap: 100px;
-    font-size: 16px;
+    grid-column-gap: max(100px, 5vw);
+    font-size: max(16px, 0.8em);
     text-align: center;
     display: grid;
     grid-template-rows: auto auto auto;

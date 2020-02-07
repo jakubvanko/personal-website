@@ -27,7 +27,7 @@ const Header = () => {
 
     return (
         <Container $mobileActive={isMobileActive} $scrolled={isScrolled}>
-            <Icon name={"signature"} $gridArea={"signature"} as={"a"} href={"#home"}/>
+            <Icon name={"signature"} $gridArea={"signature"} as={"a"} href={"#home"} width={"max(46.343px, 2.5vw)"} height={"auto"}/>
             <List>
                 <li><Anchor href={"#about"} onClick={() => handleLinkClick()}>ABOUT</Anchor></li>
                 <li><Anchor href={"#portfolio"} onClick={() => handleLinkClick()}>PORTFOLIO</Anchor></li>
