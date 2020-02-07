@@ -119,7 +119,7 @@ export const ContactForm = styled.form`
 `;
 
 export const TextArea = styled.textarea`
-    font-size: 1.15em;
+    font-size: max(16px, 1.15em);
     color: #707070;
     border: none;
     outline: none;
