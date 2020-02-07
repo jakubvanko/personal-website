@@ -11,6 +11,7 @@ const Button = styled.button`
     font-weight: normal;
     grid-area: ${props => props.$gridArea && props.$gridArea};
     cursor: pointer;
+    transition: box-shadow 0.3s;
     
     @media only screen {
         @media (min-width: 992px) {            
@@ -18,6 +19,10 @@ const Button = styled.button`
                 font-size: 1.5em;
             }
         }
+    }
+    
+    :hover {
+        box-shadow: 1px 6px 8px #00000066;
     }
 `;
 
