@@ -11,6 +11,14 @@ const Button = styled.button`
     font-weight: normal;
     grid-area: ${props => props.$gridArea && props.$gridArea};
     cursor: pointer;
+    
+    @media only screen {
+        @media (min-width: 992px) {            
+            @media (orientation: portrait) {
+                font-size: 1.5em;
+            }
+        }
+    }
 `;
 
 export default Button;

@@ -1,4 +1,5 @@
 import React from "react";
+import useWindowDimensions from "../../scripts/hooks/useWindowDimensions";
 
 import {
     Container,
@@ -13,7 +14,6 @@ import {
 } from "./Contact.styled";
 import SectionLine from "../SectionLine/SectionLine";
 import Heading from "../Heading/Heading";
-import HeadingSub from "../HeadingSub/HeadingSub";
 import Icon from "../Icon/Icon";
 
 const CONTACTS = [{
@@ -30,28 +30,33 @@ const CONTACTS = [{
     link: "https://github.com/jakubvanko"
 }];
 
-const Contact = () => (
-    <Container id={"contact"}>
-        <SectionLine $color={"#2F4961"}/>
-        <Heading>Contact</Heading>
-        <AllContactsContainer>
-            {CONTACTS.map(({icon, text, link}) => (
-                <ContactContainer href={link} target={"_blank"} rel={"noopener noreferrer"}>
-                    <Icon name={icon} height={"1em"} width={"1em"}/>
-                    <p>{text}</p>
-                </ContactContainer>
-            ))}
-        </AllContactsContainer>
-        <FormContainer>
-            <SubHeading>Send me a message</SubHeading>
-            <ContactForm>
-                <Input placeholder={"NAME"}/>
-                <Input placeholder={"EMAIL"}/>
-                <TextArea placeholder={"MESSAGE"}/>
-                <FormButton>Send message</FormButton>
-            </ContactForm>
-        </FormContainer>
-    </Container>
-);
+const Contact = () => {
+    const [width] = useWindowDimensions();
+    const iconDimensions = width < 2400 ? "2em" : "3.5em";
+
+    return (
+        <Container id={"contact"}>
+            <SectionLine $color={"#2F4961"}/>
+            <Heading>Contact</Heading>
+            <AllContactsContainer>
+                {CONTACTS.map(({icon, text, link}) => (
+                    <ContactContainer key={text} href={link} target={"_blank"} rel={"noopener noreferrer"}>
+                        <Icon name={icon} height={iconDimensions} width={iconDimensions}/>
+                        <p>{text}</p>
+                    </ContactContainer>
+                ))}
+            </AllContactsContainer>
+            <FormContainer>
+                <SubHeading>Send me a message</SubHeading>
+                <ContactForm>
+                    <Input placeholder={"NAME"}/>
+                    <Input placeholder={"EMAIL"}/>
+                    <TextArea placeholder={"MESSAGE"}/>
+                    <FormButton>Send message</FormButton>
+                </ContactForm>
+            </FormContainer>
+        </Container>
+    );
+};
 
 export default Contact;
