@@ -1,7 +1,7 @@
 import React from "react";
 
 import {Container, FooterText, CopyrightContainer} from "./Footer.styled";
-import SectionLine from "../SectionLine/SectionLine";
+import SectionLine from "../../components/SectionLine/SectionLine";
 
 const Footer = () => (
     <Container>

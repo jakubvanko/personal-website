@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SectionContainer from "../SectionContainer/SectionContainer";
+import SectionContainer from "../../components/SectionContainer/SectionContainer";
 
 export const Container = styled(SectionContainer)`    
     @media only screen {    

@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 import useWindowDimensions from "../../scripts/hooks/useWindowDimensions";
 
 import {Container, List, Anchor} from "./Header.styled";
-import Icon from "../Icon/Icon";
+import Icon from "../../components/Icon/Icon";
 
 const Header = () => {
     const [isMobileActive, setMobileActive] = useState(false);

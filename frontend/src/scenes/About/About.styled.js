@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Text from "../Text/Text";
-import SectionContainer from "../SectionContainer/SectionContainer";
+import Text from "../../components/Text/Text";
+import SectionContainer from "../../components/SectionContainer/SectionContainer";
 
 export const Container = styled(SectionContainer)`    
     @media only screen {

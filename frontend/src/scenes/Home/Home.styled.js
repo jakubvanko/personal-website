@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import Icon from "../Icon/Icon";
+import Icon from "../../components/Icon/Icon";
 
 export const Container = styled.div`
     height: 100vh;

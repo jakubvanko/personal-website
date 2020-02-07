@@ -12,9 +12,9 @@ import {
     FormContainer,
     SubHeading
 } from "./Contact.styled";
-import SectionLine from "../SectionLine/SectionLine";
-import Heading from "../Heading/Heading";
-import Icon from "../Icon/Icon";
+import SectionLine from "../../components/SectionLine/SectionLine";
+import Heading from "../../components/Heading/Heading";
+import Icon from "../../components/Icon/Icon";
 
 const CONTACTS = [{
     icon: "email",

@@ -1,10 +1,10 @@
 import React from "react";
 
 import {Container, ListContainer, ListText} from "./About.styled";
-import SectionLine from "../SectionLine/SectionLine";
-import Heading from "../Heading/Heading";
-import HeadingSub from "../HeadingSub/HeadingSub";
-import Text from "../Text/Text";
+import SectionLine from "../../components/SectionLine/SectionLine";
+import Heading from "../../components/Heading/Heading";
+import HeadingSub from "../../components/HeadingSub/HeadingSub";
+import Text from "../../components/Text/Text";
 
 const TEXT = `
 I am a full-stack software developer with programming experience of over 3 years. 

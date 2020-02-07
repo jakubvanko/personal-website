@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import SectionContainer from "../SectionContainer/SectionContainer";
-import Text from "../Text/Text";
-import Button from "../Button/Button";
-import HeadingSub from "../HeadingSub/HeadingSub";
+import SectionContainer from "../../components/SectionContainer/SectionContainer";
+import Text from "../../components/Text/Text";
+import Button from "../../components/Button/Button";
+import HeadingSub from "../../components/HeadingSub/HeadingSub";
 
 export const Container = styled(SectionContainer)`
     @media only screen {

@@ -8,10 +8,10 @@ import {
     ProjectDataContainer,
     AllProjectsContainer
 } from "./Portfolio.styled";
-import SectionLine from "../SectionLine/SectionLine";
-import Heading from "../Heading/Heading";
-import Text from "../Text/Text";
-import Button from "../Button/Button";
+import SectionLine from "../../components/SectionLine/SectionLine";
+import Heading from "../../components/Heading/Heading";
+import Text from "../../components/Text/Text";
+import Button from "../../components/Button/Button";
 
 const PROJECTS = [{
     title: "Spektrum",
