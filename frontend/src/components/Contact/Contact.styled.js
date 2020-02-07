@@ -2,8 +2,21 @@ import styled from "styled-components";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import Text from "../Text/Text";
 import Button from "../Button/Button";
+import HeadingSub from "../HeadingSub/HeadingSub";
 
 export const Container = styled(SectionContainer)`
+    @media only screen {
+        @media (min-width: 992px) {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-areas: "heading contacts form";
+            align-items: center;
+            grid-column-gap: 7vw;
+            
+            @media (orientation: portrait) {
+            }
+        }
+    }
 `;
 
 export const AllContactsContainer = styled.div`
@@ -21,6 +34,33 @@ export const ContactContainer = styled(Text).attrs({
     
     font-size: 1.09em;
     line-height: 3.1em;
+    
+    @media only screen {
+        @media (min-width: 992px) {
+            text-align: left !important;
+            
+        }
+    }
+`;
+
+export const FormContainer = styled.div`
+    @media only screen {
+        @media (min-width: 992px) {
+            padding: 0 3vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+`;
+
+export const SubHeading = styled(HeadingSub)`
+    @media only screen {
+        @media (min-width: 992px) {
+            padding-left: 0;
+            text-transform: uppercase;
+        }
+    }
 `;
 
 export const ContactForm = styled.form`

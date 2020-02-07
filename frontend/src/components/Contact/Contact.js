@@ -7,7 +7,9 @@ import {
     ContactForm,
     TextArea,
     Input,
-    FormButton
+    FormButton,
+    FormContainer,
+    SubHeading
 } from "./Contact.styled";
 import SectionLine from "../SectionLine/SectionLine";
 import Heading from "../Heading/Heading";
@@ -40,13 +42,15 @@ const Contact = () => (
                 </ContactContainer>
             ))}
         </AllContactsContainer>
-        <HeadingSub>Send me a message</HeadingSub>
-        <ContactForm>
-            <Input placeholder={"NAME"}/>
-            <Input placeholder={"EMAIL"}/>
-            <TextArea placeholder={"MESSAGE"}/>
-            <FormButton>Send message</FormButton>
-        </ContactForm>
+        <FormContainer>
+            <SubHeading>Send me a message</SubHeading>
+            <ContactForm>
+                <Input placeholder={"NAME"}/>
+                <Input placeholder={"EMAIL"}/>
+                <TextArea placeholder={"MESSAGE"}/>
+                <FormButton>Send message</FormButton>
+            </ContactForm>
+        </FormContainer>
     </Container>
 );
 
