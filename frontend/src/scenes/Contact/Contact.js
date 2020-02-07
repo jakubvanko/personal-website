@@ -5,16 +5,13 @@ import {
     Container,
     AllContactsContainer,
     ContactContainer,
-    ContactForm,
-    TextArea,
-    Input,
-    FormButton,
     FormContainer,
     SubHeading
 } from "./Contact.styled";
 import SectionLine from "../../components/SectionLine/SectionLine";
 import Heading from "../../components/Heading/Heading";
 import Icon from "../../components/Icon/Icon";
+import ContactForm from "./components/ContactForm";
 
 const CONTACTS = [{
     icon: "email",
@@ -48,12 +45,7 @@ const Contact = () => {
             </AllContactsContainer>
             <FormContainer>
                 <SubHeading>Send me a message</SubHeading>
-                <ContactForm>
-                    <Input placeholder={"NAME"}/>
-                    <Input placeholder={"EMAIL"}/>
-                    <TextArea placeholder={"MESSAGE"}/>
-                    <FormButton>Send message</FormButton>
-                </ContactForm>
+                <ContactForm/>
             </FormContainer>
         </Container>
     );
