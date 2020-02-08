@@ -35,6 +35,7 @@ export const List = styled.ul`
     list-style: none;
     padding: 0;
     font-weight: bold;
+    grid-column-gap: 5vw;
     grid-column-gap: max(100px, 5vw);
     font-size: max(16px, 0.8em);
     text-align: center;

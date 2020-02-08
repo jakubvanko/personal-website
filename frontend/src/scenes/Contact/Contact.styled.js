@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import Text from "../../components/Text/Text";
-import Button from "../../components/Button/Button";
 import HeadingSub from "../../components/HeadingSub/HeadingSub";
 
 export const Container = styled(SectionContainer)`

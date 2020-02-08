@@ -4,6 +4,7 @@ import Icon from "../../components/Icon/Icon";
 
 export const Container = styled.div`
     height: 100vh;
+    max-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

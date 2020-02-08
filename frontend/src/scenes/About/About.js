@@ -19,13 +19,13 @@ const AREAS = ["• Javascript (React, Redux, Apollo)", "• Node.js (Express, G
 
 const CERTIFICATIONS = [{
     text: "• C2 in Cambridge Advanced English",
-    link: ""
+    link: "https://www.cambridgeenglish.org/cmp/verifiers/"
 }, {
     text: "• Machine Learning by Coursera",
-    link: ""
+    link: "https://www.coursera.org/account/accomplishments/verify/ZXZA8FNSSN9N"
 }, {
     text: "• Cryptography by Coursera",
-    link: ""
+    link: "https://www.coursera.org/account/accomplishments/verify/6CQZH2LZLRXL"
 }];
 
 const About = () => (
