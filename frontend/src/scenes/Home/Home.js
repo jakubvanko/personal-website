@@ -30,7 +30,7 @@ const Home = () => (
             <FallingStars/>
             <Background background={bg_top}/>
         </PositionedBackground>
-        <ScrollIcon to={"about"} smooth={true} name={"arrow"}/>
+        <ScrollIcon to={"about"} smooth={true} name={"arrow"} aria-label={"go to about"}/>
     </Container>
 );
 

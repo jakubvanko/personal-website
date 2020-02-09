@@ -32,14 +32,15 @@ const Header = () => {
 
     return (
         <Container $mobileActive={isMobileActive} $scrolled={isScrolled}>
-            <ScrollIcon to={"home"} smooth={true} name={"signature"} $gridArea={"signature"} width={signatureWidth}/>
+            <ScrollIcon to={"home"} smooth={true} name={"signature"} $gridArea={"signature"} width={signatureWidth}
+                        aria-label={"home"}/>
             <List>
                 <li><Link to={"about"} smooth={true} onClick={handleLinkClick}>ABOUT</Link></li>
                 <li><Link to={"portfolio"} smooth={true} onClick={handleLinkClick}>PORTFOLIO</Link></li>
                 <li><Link to={"contact"} smooth={true} onClick={handleLinkClick}>CONTACT</Link></li>
             </List>
             <Icon name={"hamburger"} $gridArea={"hamburger"} $display={width >= 992 && "none"}
-                  onClick={handleButtonClick}/>
+                  onClick={handleButtonClick} aria-label={"open navigation"}/>
         </Container>
     )
 };

@@ -82,10 +82,10 @@ const ContactForm = () => {
 
     return (
         <Form onSubmit={handleSubmit}>
-            <Input placeholder={"NAME"} value={name} onChange={e => setName(e.target.value)}/>
-            <Input placeholder={"EMAIL"} value={email} onChange={e => setEmail(e.target.value)}/>
-            <TextArea placeholder={"MESSAGE"} value={text} onChange={e => setText(e.target.value)}/>
-            <FormButton>Send message</FormButton>
+            <Input placeholder={"NAME"} value={name} onChange={e => setName(e.target.value)} aria-label={"name"}/>
+            <Input placeholder={"EMAIL"} value={email} onChange={e => setEmail(e.target.value)} aria-label={"email"}/>
+            <TextArea placeholder={"MESSAGE"} value={text} onChange={e => setText(e.target.value)} aria-label={"message"}/>
+            <FormButton aria-label={"submit"}>Send message</FormButton>
         </Form>
     );
 };

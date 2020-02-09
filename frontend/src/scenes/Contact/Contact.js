@@ -38,7 +38,7 @@ const Contact = () => {
             <AllContactsContainer>
                 {CONTACTS.map(({icon, text, link}) => (
                     <ContactContainer key={text} href={link} target={"_blank"} rel={"noopener noreferrer"}>
-                        <Icon name={icon} width={iconDimensions}/>
+                        <Icon aria-label={icon} name={icon} width={iconDimensions}/>
                         <p>{text}</p>
                     </ContactContainer>
                 ))}
