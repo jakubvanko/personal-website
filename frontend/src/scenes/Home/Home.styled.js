@@ -1,10 +1,9 @@
 import styled from "styled-components";
+import Div100vh from 'react-div-100vh';
 
 import Icon from "../../components/Icon/Icon";
 
-export const Container = styled.div`
-    height: 100vh;
-    max-height: 100%;
+export const Container = styled(Div100vh)`
     display: flex;
     justify-content: center;
     align-items: center;
