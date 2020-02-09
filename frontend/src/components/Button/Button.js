@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Button = styled.button`
+    box-shadow: 0 3px 6px #939393;
     box-shadow: 0 3px 6px #00000066;
     border: none;
     background-color: white;
@@ -22,6 +23,7 @@ const Button = styled.button`
     }
     
     :hover {
+        box-shadow: 1px 6px 8px #939393;
         box-shadow: 1px 6px 8px #00000066;
     }
 `;

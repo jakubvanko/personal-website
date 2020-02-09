@@ -15,6 +15,7 @@ export const FooterText = styled(Text)`
 `;
 
 export const CopyrightContainer = styled.div`
+    border-top: 1px solid #cbcbcb;
     border-top: 1px solid #7070704D;
     padding: 1.5vh 0 2vh 0;
     margin-top: 1.5vh;

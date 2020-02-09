@@ -4,8 +4,10 @@ import styled from "styled-components";
 import Button from "../../../components/Button/Button";
 
 const Form = styled.form`
+    box-shadow: 0 3px 6px #939393;
     box-shadow: 0 3px 6px #00000066;
     width: 100%;
+    min-height: 50vh;
     min-height: max(50vh, 20em, 320px);
     position: relative;
     // Not sure about the margin here
@@ -28,6 +30,7 @@ const Form = styled.form`
 `;
 
 const TextArea = styled.textarea`
+    font-size: 1em;
     font-size: max(16px, 1em);
     color: black;
     border: none;
@@ -52,6 +55,7 @@ const TextArea = styled.textarea`
 const Input = styled(TextArea).attrs({
     as: "input"
 })`
+    border-bottom: 1px solid #dadada;
     border-bottom: 1px solid #70707026;
 `;
 

@@ -35,6 +35,10 @@ export const ListContainer = styled.div`
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
+            @supports (-ms-ime-align: auto) {
+                justify-content: space-between;
+                padding: 11vh 3vw;
+            }
             
             @media (orientation: portrait) {
                 justify-self: center;

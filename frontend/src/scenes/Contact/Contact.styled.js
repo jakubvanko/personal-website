@@ -40,6 +40,7 @@ export const ContactContainer = styled(Text).attrs({
     grid-template-columns: min-content auto;
     align-items: center;
     padding-left: 5px;
+    grid-column-gap: 1.5vw;
     grid-column-gap: max(15px, 1.5vw);
     
     font-size: 1.09em;
