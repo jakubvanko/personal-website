@@ -15,8 +15,8 @@ import ContactForm from "./components/ContactForm";
 
 const CONTACTS = [{
     icon: "email",
-    text: "kubko.vanko@gmail.com",
-    link: "mailto:kubko.vanko@gmail.com"
+    text: "business@jakubvanko.com",
+    link: "mailto:business@jakubvanko.com"
 }, {
     icon: "linkedin",
     text: "linkedin.com/in/jakubvanko",
