@@ -1,5 +1,6 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
+const helmet = require('helmet');
 require('dotenv').config();
 
 const app = express();
@@ -40,8 +41,9 @@ router.post("/", async (request, response) => {
     response.end()
 });
 
+app.use(helmet());
 app.use("/api", router);
 
 app.listen(process.env.PORT, () => {
-    console.log(`Personal backend running...`)
+    console.log(`Personal backend running at http://${process.env.HOSTNAME}:${process.env.PORT}`)
 });
