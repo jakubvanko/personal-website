@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
+import axios from "axios";
 
 import Button from "../../../components/Button/Button";
 
@@ -66,6 +67,19 @@ const FormButton = styled(Button)`
     right: 1.2em;
 `;
 
+const sendMail = async (name, email, text) => {
+    if (text.length < 5) return false;
+    const data = {
+        name,
+        email,
+        text
+    };
+    const result = await axios.post("https://jakubvanko.com/api", {}, { params: data});
+    return result.status === 200;
+};
+
+const RESPONSE_SUCCESS = "Thank you for contacting me.\n\nI will get to you as soon as possible.\n\n~ Jakub Vanko";
+const RESPONSE_FAILURE = "There was an error sending your message.\n\nPlease contact me via email directly.\n\n~ Jakub Vanko";
 
 const ContactForm = () => {
     const [name, setName] = useState("");
@@ -74,17 +88,20 @@ const ContactForm = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        // TODO: API CALL TO HANDLE SUBMIT
-        setName("");
-        setEmail("");
-        setText("Thank you for contacting me.\n\nI will get to you as soon as possible.\n\n~ Jakub Vanko");
+        sendMail(name, email, text).then(result => {
+            setName("");
+            setEmail("");
+            const responseText = result ? RESPONSE_SUCCESS : RESPONSE_FAILURE;
+            setText(responseText);
+        });
     };
 
     return (
         <Form onSubmit={handleSubmit}>
             <Input placeholder={"NAME"} value={name} onChange={e => setName(e.target.value)} aria-label={"name"}/>
             <Input placeholder={"EMAIL"} value={email} onChange={e => setEmail(e.target.value)} aria-label={"email"}/>
-            <TextArea placeholder={"MESSAGE"} value={text} onChange={e => setText(e.target.value)} aria-label={"message"}/>
+            <TextArea placeholder={"MESSAGE"} value={text} onChange={e => setText(e.target.value)}
+                      aria-label={"message"}/>
             <FormButton aria-label={"submit"}>Send message</FormButton>
         </Form>
     );
