@@ -1,7 +1,8 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
-const helmet = require('helmet');
-require('dotenv').config();
+const cors = require("cors");
+const helmet = require("cors");
+require("dotenv").config();
 
 const app = express();
 const router = express.Router();
@@ -37,6 +38,7 @@ router.post("/", async (request, response) => {
     response.end()
 });
 
+app.use(cors());
 app.use(helmet());
 app.use("/api", router);
 
