@@ -79,7 +79,7 @@ const sendMail = async (name, email, text) => {
 };
 
 const RESPONSE_SUCCESS = "Thank you for contacting me.\n\nI will get to you as soon as possible.\n\n~ Jakub Vanko";
-const RESPONSE_FAILURE = "There was an error sending your message.\n\nPlease contact me via email directly.\n\n~ Jakub Vanko";
+const RESPONSE_FAILURE = "There was an error.\n\nPlease contact me directly.\n\n~ Jakub Vanko";
 
 const ContactForm = () => {
     const [name, setName] = useState("");
