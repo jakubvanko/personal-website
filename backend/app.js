@@ -33,11 +33,7 @@ router.post("/", async (request, response) => {
         subject: `New message ${name && "from " + name} ${email && "at " + email}`,
         text: text
     });
-    if (result.error) {
-        response.status(400);
-    } else {
-        response.status(200);
-    }
+    result.error ? response.status(400) : response.status(200);
     response.end()
 });
 
