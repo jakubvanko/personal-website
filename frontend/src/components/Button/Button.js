@@ -12,7 +12,8 @@ const Button = styled.button`
     font-weight: normal;
     grid-area: ${props => props.$gridArea && props.$gridArea};
     cursor: pointer;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.1s;
+    outline: none;
     
     @media only screen {
         @media (min-width: 992px) {            

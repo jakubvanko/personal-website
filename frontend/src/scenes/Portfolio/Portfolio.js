@@ -36,6 +36,8 @@ const PROJECTS = [{
     linkCode: "https://github.com/jakubvanko/project-minecraft-gender"
 }];
 
+const openLink = (link) => (() => window.open(link));
+
 const Portfolio = () => (
     <Container id={"portfolio"}>
         <SectionLine $color={"#D6ACD5"}/>
@@ -48,8 +50,8 @@ const Portfolio = () => (
                     <ProjectHeading>{title}</ProjectHeading>
                     <ProjectDataContainer>
                         <Text $gridArea={"text"}>{text}</Text>
-                        <Button $gridArea={"live"}>Live version</Button>
-                        <Button $gridArea={"code"}>Code</Button>
+                        <Button $gridArea={"live"} onClick={openLink(linkLive)}>Live version</Button>
+                        <Button $gridArea={"code"} onClick={openLink(linkCode)}>Code</Button>
                     </ProjectDataContainer>
                 </ProjectContainer>
             ))}
