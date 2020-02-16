@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Suspense} from "react";
 import {ScrollLink} from "react-scroll/modules";
 
 import {
@@ -6,32 +6,32 @@ import {
     CenteredIconButton,
     TitleBold,
     TitleThin,
-    PositionedBackground,
     AdditionalText,
     TextContainer
 } from "./Home.styled";
-import Background from "./components/Background";
-import FallingStars from "./components/FallingStars";
+import useWindowDimensions from "../../scripts/hooks/useWindowDimensions";
 
-import bg_top from "./assets/bg_top.png"
-import bg_bottom from "./assets/bg_bottom.jpg"
+const AnimatedBackground = React.lazy(() => import("./components/AnimatedBackground"));
 
 const ScrollIcon = ScrollLink(CenteredIconButton);
 
-const Home = () => (
-    <Container id={"home"}>
-        <TextContainer>
-            <TitleThin>Jakub</TitleThin>
-            <TitleBold>Vanko</TitleBold>
-            <AdditionalText>Developer • Programmer • Specialist</AdditionalText>
-        </TextContainer>
-        <PositionedBackground>
-            <Background background={bg_bottom}/>
-            <FallingStars/>
-            <Background background={bg_top}/>
-        </PositionedBackground>
-        <ScrollIcon to={"about"} smooth={true} name={"arrow"} aria-label={"go to about"}/>
-    </Container>
-);
+const Home = () => {
+    const [width] = useWindowDimensions();
+
+    return (
+        <Container id={"home"}>
+            <TextContainer>
+                <TitleThin>Jakub</TitleThin>
+                <TitleBold>Vanko</TitleBold>
+                <AdditionalText>Developer • Programmer • Specialist</AdditionalText>
+            </TextContainer>
+            {width > 991 && (
+                <Suspense fallback={<div/>}>
+                    <AnimatedBackground/>
+                </Suspense>)}
+            <ScrollIcon to={"about"} smooth={true} name={"arrow"} aria-label={"go to about"}/>
+        </Container>
+    )
+};
 
 export default Home;
