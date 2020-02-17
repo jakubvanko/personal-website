@@ -18,7 +18,7 @@ const PROJECTS = [{
     text: `A full-stack web application for concert venue and ticket ordering. 
     Written in MERN stack and includes a RESTful web API, GraphQL endpoint, token 
     login system, form validation and a custom content management system.`,
-    linkLive: "",
+    linkLive: "https://spektrum.jakubvanko.com",
     linkCode: "https://github.com/jakubvanko/spektrum"
 }, {
     title: "CommonCore Plugins",
