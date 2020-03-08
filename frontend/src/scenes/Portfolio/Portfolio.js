@@ -25,8 +25,8 @@ const PROJECTS = [{
     text: `Java game plugins downloaded over 6000+ times and currently running on 100+ servers.
     Includes a custom code library, complete user configurability, support for 3rd party
     modifications, full documentation and tutorials.`,
-    linkLive: "",
-    linkCode: "https://github.com/jakubvanko/minecraft-plugins"
+    linkLive: "https://commoncore.jakubvanko.com",
+    linkCode: "https://github.com/jakubvanko/commoncore"
 }, {
     title: "Minecraft Gender Rec.",
     text: `A web application for AI gender recognition of Minecraft player skins.
