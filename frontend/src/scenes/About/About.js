@@ -14,8 +14,10 @@ I am also passionate about experimenting with cutting-edge techniques such as ma
 to push my endeavours into the tiers of the highest quality.
 `;
 
-const AREAS = ["• Javascript (React, Redux, Apollo)", "• Node.js (Express, GraphQL, REST)",
-    "• Java (OOP, design patterns, UML)"];
+const AREAS = [
+    "• JavaScript / TypeScript / Java",
+    "• React / Redux / GraphQL / Jest",
+    "• Node.js / Express / REST / OOP"];
 
 const CERTIFICATIONS = [{
     text: "• C2 in Cambridge Advanced English",
@@ -30,7 +32,7 @@ const CERTIFICATIONS = [{
 
 const About = () => (
     <Container id={"about"}>
-        <SectionLine $color={"#525F95"} />
+        <SectionLine $color={"#525F95"}/>
         <Heading>About me</Heading>
         <Text>{TEXT}</Text>
         <ListContainer>
@@ -41,8 +43,8 @@ const About = () => (
             <div>
                 <HeadingSub>Certifications</HeadingSub>
                 {CERTIFICATIONS.map(({text, link}) => <ListText as={"a"} href={link} target={"_blank"}
-                                                            rel={"noopener noreferrer"}
-                                                            key={text}>{text}</ListText>)}
+                                                                rel={"noopener noreferrer"}
+                                                                key={text}>{text}</ListText>)}
             </div>
         </ListContainer>
     </Container>

@@ -23,10 +23,10 @@ const Home = () => {
             <TextContainer>
                 <TitleThin>Jakub</TitleThin>
                 <TitleBold>Vanko</TitleBold>
-                <AdditionalText>Developer • Programmer • Specialist</AdditionalText>
+                <AdditionalText>Developer • Programmer • Consultant</AdditionalText>
             </TextContainer>
             {width > 991 && (
-                <Suspense fallback={<div/>}>
+                <Suspense fallback={<div style={{backgroundColor: "red"}}/>}>
                     <AnimatedBackground/>
                 </Suspense>)}
             <ScrollIcon to={"about"} smooth={true} name={"arrow"} aria-label={"go to about"}/>

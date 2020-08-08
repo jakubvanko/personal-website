@@ -113,7 +113,7 @@ export const AdditionalText = styled.p`
         
         @media (min-width: 1300px) {
             @media (orientation: landscape) {
-                padding: 1.86em 2.45em;
+                padding: 1.86em 2.15em;
                 font-size: 0.75em;
                 letter-spacing: 0.157em;
             }
