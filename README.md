@@ -34,10 +34,6 @@ Despite the simplicity of the website, colour theory was used extensively throug
 
 ## Features
 
-##### Back-End
-- Lightweight REST API
-- Contact form handler
-
 ##### Front-End
 - Completely responsive design
 - SVG shape background image
@@ -47,17 +43,11 @@ Despite the simplicity of the website, colour theory was used extensively throug
 
 ## Used Technologies:
 
-##### Back-End
-- Node.js
-  - Express.js
-  - Nodemailer
-
 ##### Front-End
 - React.js v16.8
   - React Hooks
   - React Lazy and Suspense
 - styled-components
-- axios
 - react-spring
 - react-scroll
 
@@ -69,12 +59,11 @@ Despite the simplicity of the website, colour theory was used extensively throug
 
 ## Deployment
 
-The project was deployed on a DigitalOcean droplet where it is being managed by Nginx.
-
-The deployment of frontend can be done simply using a node.js script ("npm run deploy").
-The backend is similarly deployed using a node.js script, but newly included node modules must be installed separately on the server ("npm install").
+The project is to be deployed on Vercel.
 
 
 ## Conclusion
 
 The project was completed successfully. All needed features were implemented while ensuring the simplicity of possible further development.
+
+Edit (14.5.2023): The project is to be rewritten from scratch due to missing features.
