@@ -92,6 +92,8 @@ export const DownloadResumeContainer = styled.img`
 `;
 
 export const SubHeading = styled(HeadingSub)`
+    color: black;
+    
     @media only screen {
         @media (min-width: 992px) {
             padding-left: 0;
