@@ -7,7 +7,6 @@ import Home from "./Home/Home";
 import About from "./About/About";
 import Portfolio from "./Portfolio/Portfolio";
 import Contact from "./Contact/Contact";
-import Footer from "./Footer/Footer";
 
 const Main = () => (
     <>
@@ -16,7 +15,6 @@ const Main = () => (
         <About/>
         <Portfolio/>
         <Contact/>
-        <Footer/>
     </>
 );
 
