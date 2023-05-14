@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import {Container} from "./Icon.styled";
 import Arrow from "./components/Arrow";
@@ -25,10 +24,6 @@ const Icon = ({name, width, ...props}) => {
             <IconComponent width={width}/>
         </Container>
     )
-};
-
-Icon.propTypes = {
-    name: PropTypes.oneOf(Object.keys(ICON_MAP)).isRequired
 };
 
 export default Icon;
