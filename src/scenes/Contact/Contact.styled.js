@@ -7,7 +7,7 @@ export const Container = styled(SectionContainer)`
     @media only screen {
         @media (min-width: 992px) {
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: auto 1fr 1fr;
             grid-template-areas: "heading contacts form";
             align-items: center;
             grid-column-gap: 7vw;
@@ -25,6 +25,8 @@ export const Container = styled(SectionContainer)`
 export const AllContactsContainer = styled.div`
     @media only screen {
         @media (min-width: 992px) {
+            justify-self: center;
+
             @media (orientation: portrait) {
                 justify-self: center;
                 align-self: flex-end;
@@ -65,7 +67,10 @@ export const ContactContainer = styled(Text).attrs({
     }
 `;
 
-export const FormContainer = styled.div`
+export const ResumeContainer = styled.div`
+    padding-bottom: 5vh;
+    text-decoration: none;
+
     @media only screen {
         @media (min-width: 992px) {
             padding: 0 3vw;
@@ -80,11 +85,18 @@ export const FormContainer = styled.div`
     }
 `;
 
+export const DownloadResumeContainer = styled.img`
+    box-shadow: 0 3px 6px #939393;
+    box-shadow: 0 3px 6px #00000066;
+    width: 100%;
+`;
+
 export const SubHeading = styled(HeadingSub)`
     @media only screen {
         @media (min-width: 992px) {
             padding-left: 0;
-            text-transform: uppercase;
+            text-transform: capitalize;
+            color: #707070;
             
             @media (orientation: portrait) {
                 padding-bottom: 2vh;

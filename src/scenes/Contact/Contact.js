@@ -5,13 +5,15 @@ import {
     Container,
     AllContactsContainer,
     ContactContainer,
-    FormContainer,
-    SubHeading
+    ResumeContainer,
+    SubHeading,
+    DownloadResumeContainer
 } from "./Contact.styled";
 import SectionLine from "../../components/SectionLine/SectionLine";
 import Heading from "../../components/Heading/Heading";
 import Icon from "../../components/Icon/Icon";
-import ContactForm from "./components/ContactForm";
+import resumeimg from "./assets/resumeimg.jpg";
+import resume from "./assets/resume.pdf";
 
 const CONTACTS = [{
     icon: "email",
@@ -43,10 +45,10 @@ const Contact = () => {
                     </ContactContainer>
                 ))}
             </AllContactsContainer>
-            <FormContainer>
-                <SubHeading>Send me a message</SubHeading>
-                <ContactForm/>
-            </FormContainer>
+            <ResumeContainer as={"a"} href={resume} download={"Vanko_Jakub_CV"}>
+                <SubHeading>Download my resumé</SubHeading>
+                <DownloadResumeContainer src={resumeimg}/>
+            </ResumeContainer>
         </Container>
     );
 };
