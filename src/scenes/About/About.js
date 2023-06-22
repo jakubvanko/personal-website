@@ -15,9 +15,9 @@ to push my endeavours into the tiers of the highest quality.
 `;
 
 const AREAS = [
-    "• JavaScript / TypeScript / Java",
-    "• React / Redux / GraphQL / Jest",
-    "• Node.js / Express / REST / OOP"];
+    "• JavaScript / TypeScript / C# / Java ",
+    "• React / Redux / GraphQL / SQL",
+    "• Node.js / Express / Spring / REST"];
 
 const CERTIFICATIONS = [{
     text: "• C2 in Cambridge Advanced English",
